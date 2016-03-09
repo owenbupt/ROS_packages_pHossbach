@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+	<arg name="boards_config" default="$(find ar_sys)/data/vrmagic/multi/boards.yml" />
+	<arg name="boards_directory" default="$(find ar_sys)/data/vrmagic/multi" />
+
+	<node ns="/" pkg="ar_sys" type="multi_boards_left" name="multi_boards_vrm_left" output="screen">
+		<remap from="/camera_info" to="apollon/vrmagic/left/camera_info" />
+		<remap from="/image" to="apollon/vrmagic/left/image_rect" />
+		<remap from="/camera_frame_id" to="camera1"/>
+
+		<param name="image_is_rectified" type="bool" value="true"/>
+		<param name="boards_config" type="string" value="$(arg boards_config)"/>
+		<param name="boards_directory" type="string" value="$(arg boards_directory)"/>
+		<param name="draw_markers" type="bool" value="true" />
+		<param name="draw_markers_cube" type="bool" value="false" />
+		<param name="draw_markers_axis" type="bool" value="false" />
+	</node>
+
+	<node ns="/" pkg="ar_sys" type="multi_boards_right" name="multi_boards_vrm_right" output="screen">
+		<remap from="/camera_info" to="apollon/vrmagic/right/camera_info" />
+		<remap from="/image" to="apollon/vrmagic/right/image_rect" />
+		<remap from="/camera_frame_id" to="camera1"/>
+
+		<param name="image_is_rectified" type="bool" value="true"/>
+		<param name="boards_config" type="string" value="$(arg boards_config)"/>
+		<param name="boards_directory" type="string" value="$(arg boards_directory)"/>
+		<param name="draw_markers" type="bool" value="true" />
+		<param name="draw_markers_cube" type="bool" value="false" />
+		<param name="draw_markers_axis" type="bool" value="false" />
+	</node>
+</launch>

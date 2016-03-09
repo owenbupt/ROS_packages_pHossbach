@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+
+	<node pkg="robot_setup_tf" type="apollon_A" name="setup_apollon_A" output="screen" />
+	<node pkg="robot_setup_tf" type="boreas_A" name="setup_boreas_A" output="screen" />
+
+</launch>

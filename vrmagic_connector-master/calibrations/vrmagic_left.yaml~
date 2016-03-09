@@ -1,0 +1,20 @@
+image_width: 754
+image_height: 480
+camera_name: vrmagic_left
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [720.766363, 0, 387.935377, 0, 720.119064, 234.301725, 0, 0, 1]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.460923, 0.19971, 0.000139, 0.001821, 0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [0.999864, 0.01645, 0.001524, -0.016457, 0.9998549999999999, 0.004452999999999999, -0.001451, -0.004477, 0.9999889999999999]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [699.075097, 0, 380.211651, 0, 0, 699.075097, 236.184362, 0, 0, 0, 1, 0]

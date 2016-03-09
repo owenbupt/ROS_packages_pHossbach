@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+
+	<node pkg="coop_localisation" type="c2c_left" name="c2c_left" output="screen" />
+	<node pkg="coop_localisation" type="c2c_right" name="c2c_right" output="screen" />
+
+
+	<node pkg="coop_localisation" type="c2c_merge" name="c2c_merge" output="screen" />
+	<param name="weight_of_right" type="double" value="0.5" />
+	<param name="filter_change_rate" type="double" value="0.2" />
+
+
+</launch>

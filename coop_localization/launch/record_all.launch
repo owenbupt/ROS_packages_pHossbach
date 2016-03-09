@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+
+	<node pkg="coop_localisation" type="record_c2c" name="record_c2c" output="screen" />
+	<node pkg="coop_localisation" type="record_libviso2" name="record_libviso2" output="screen" />
+	<node pkg="coop_localisation" type="record_webcam2" name="record_webcam2" output="screen" />
+	<node pkg="coop_localisation" type="record_fusion" name="record_fusion" output="screen" />
+
+</launch>
